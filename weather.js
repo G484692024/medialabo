@@ -6,9 +6,13 @@ function print(data) {
 
 // 課題5-1 の関数 printDom() はここに記述すること
 function printDom(data) {
-
+  let l = document.createElement('li');
+  l.textContent = (data);
+  let u = document.querySelector('h2#search');
+  u.insertAdjacentElement('beforeend', l);
 }
-
+let b = document.querySelector('div#result');
+b.addEventListener('click', printDom);
 // 課題5-1 のイベントハンドラの定義
 function show() {
 
