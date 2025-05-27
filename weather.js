@@ -1,21 +1,25 @@
 
 // 課題3-2 のプログラムはこの関数の中に記述すること
-function print(data) {
+function print() {
   console.log(data);
-}
 
+}
 // 課題5-1 の関数 printDom() はここに記述すること
 function printDom(data) {
-  let l = document.createElement('li');
-  l.textContent = (data);
-  let u = document.querySelector('h2#search');
+  let l = document.createElement('div');
+  l.setAttribute('id', 'result');
+  let u = document.querySelector('body');
   u.insertAdjacentElement('beforeend', l);
+  let s = document.createElement('p');
+	s.textContent = (data.id);
+	let t = document.querySelector('body');
+	t.insertAdjacentElement('afterend', s);
 }
 let b = document.querySelector('div#result');
 b.addEventListener('click', printDom);
 // 課題5-1 のイベントハンドラの定義
 function show() {
-
+  
 }
 
 // 課題5-1, 6-1 のイベントハンドラ登録処理は以下に記述
