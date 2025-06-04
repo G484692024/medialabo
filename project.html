@@ -4,15 +4,29 @@
     <meta charset="utf-8">
     <title>プロジェクト課題</title>
     <link rel="stylesheet"href="project.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"></script>
     <script src="weather.js" defer></script>
   </head>
   <body>
-    <p>
     <h1>プロジェクト課題</h1>
     <h2>世界の天気</h2>
-    都市名: <input type="search" name="key" id="key" size="10">
-    <button id="kensaku">検索</button>
-    <div id="result"></div>
-    </p>
+    <label for="key">都市名: </label>
+	  <select name="key" id="key">
+		  <option value="">都市名を選択してください</option>
+		  <option value="360630">Cairo カイロ（エジプト）</option>
+		  <option value="524901">Moscow モスクワ（ロシア）</option>
+		  <option value="993800">Johannesburg ヨハネスブルク（南アフリカ）</option>
+      <option value="1816670">Beijing 北京（中華人民共和国）</option>
+      <option value="1850147">Tokyo 東京（日本）</option>
+      <option value="1880252">Singapore シンガポール</option>
+      <option value="2147714">Sydney シドニー（オーストラリア）</option>
+      <option value="2643743">London ロンドン（イギリス）</option>
+      <option value="2968815">Paris パリ（フランス）</option>
+      <option value="3451189">Rio de Janeiro リオデジャネイロ（ブラジル）</option>
+      <option value="5128581">New York ニューヨーク（アメリカ合衆国）</option>
+      <option value="5368361">Los Angeles ロサンゼルス（アメリカ合衆国）</option>
+	  </select>
+    <button id="sendRequest">検索</button>
+    <p></p>
   </body>
 </html>
